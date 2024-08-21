@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Satoshi-Variable";
+    src: url("fonts/Satoshi-VariableItalic.woff");
+}
+
+
 body {
     background-color: #000000;
     color: #FFFFFF;
@@ -5,15 +11,6 @@ body {
     margin: 0;
 }
 
-
-.header-image {
-    background-image:url("");
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    width: auto;
-    display: flex;
-}
 
 .textureImg {
     position: absolute;
@@ -32,14 +29,15 @@ body {
 }
 
 .landingContent{
-    margin: -8px;
     display: flex;;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
-    padding-top: 20vh;
+    padding-top: 5rem;
+    padding-bottom: 0%;
     height: fit-content;
     background-color: rgb(0, 0, 0);
     pointer-events: none;
+    align-items: flex-end;
 }
 
 .pfp{
@@ -47,13 +45,15 @@ body {
     justify-content: flex-start;
     pointer-events: none;
     user-select: none;
-    margin-left: 3vw;
+    margin-left: 5%;
 }
 
 .pfp img {
-    margin-right: -580px;
     pointer-events: none;
     user-select: none;
+    width: 90%;
+    height: auto;
+
 }
 
 .mainContent{
@@ -62,10 +62,59 @@ body {
     
 }
 
-.lowerContent{
-    background-color: #B2B2B2;
+.portfolioContent{
+    
+    background-color: #D9D9D9;
+    height: 100em;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 10%;
+    padding-inline-end: 10%;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    padding: 3%;
+    margin: 0;
+    pointer-events: bounding-box;
+    user-select: none;
+    font-family: 'Satoshi', sans-serif;
+    text-decoration: none; /* Add this line to remove the underline */
+}
+
+a:link{
+    text-decoration: none;
+    color: #171717;
+    font-size: xx-large;
+}
+
+a:hover {
+    color: #17171778;
+  }
+a:visited {
+    color: #171717;
+}
+
+.landingText{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: end;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    pointer-events: none;
+    user-select: none;
 }
+
+.landingText h1{
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-size: 5em;
+    padding: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
