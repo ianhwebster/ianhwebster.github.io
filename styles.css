@@ -5,7 +5,15 @@
 
 
 
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .flexbox-container {
+    margin: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -13,21 +21,29 @@
 }
 
 .flexbox-item {
-    width: 200px;
-    margin: 10px;
-    border: 3px solid #73AD21;
     background-color: #D9D9D9;
+    box-shadow:0px 0px 0px 3px black inset;
 }
 
 .flexbox-item-1 {
-    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    padding-right:10%
 }
 
 .flexbox-item-2 {
-    min-height: 200px;
+    height: 20vh;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
-
+.pfp img {
+    pointer-events: none;
+    user-select: none;
+    max-width: 80%;
+    
+}
 
 
 
@@ -67,21 +83,7 @@
     align-items: flex-end;
 }
 
-.pfp{
-    display: flex;
-    justify-content: flex-start;
-    pointer-events: none;
-    user-select: none;
-    margin-left: 5%;
-}
 
-.pfp img {
-    pointer-events: none;
-    user-select: none;
-    width: 90%;
-    height: auto;
-
-}
 
 .mainContent{
     display: flex;
@@ -125,23 +127,38 @@ a:visited {
     color: #171717;
 }
 
+
 .landingText{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
     pointer-events: none;
     user-select: none;
+    margin-right: 5%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.landingText h1,h2{
+    font-family: 'Satoshi-Variable', sans-serif;
+    pointer-events: none;
+    user-select: none;
+    margin: 0;
 }
 
 .landingText h1{
-    font-family: 'Satoshi-Variable', sans-serif;
-    font-size: 5em;
-    padding: 0;
-    pointer-events: none;
-    user-select: none;
+    font-size: 7vw;
 }
+
+
+.landingText h2{
+    font-size: 4vw;
+
+}
+
+
+
+
 
 
 
