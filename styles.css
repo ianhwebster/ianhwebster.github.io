@@ -29,7 +29,8 @@ html, body{
     display: flex;
     align-items: flex-end;
     height: 80vh;
-    padding-right:10%
+    padding-right:10%;
+    padding-left: 1%;
 }
 
 .flexbox-item-2 {
