@@ -21,8 +21,7 @@ html, body{
 }
 
 .flexbox-item {
-    background-color: #D9D9D9;
-    box-shadow:0px 0px 0px 3px black inset;
+    background-color: #000000;
 }
 
 .flexbox-item-1 {
@@ -37,13 +36,18 @@ html, body{
     height: 20vh;
     padding-right: 5%;
     padding-left: 5%;
+    background-color: #B2B2B2;
+}
+
+.pfp {
+    display:flex;
+    align-items: flex-end;
 }
 
 .pfp img {
     pointer-events: none;
     user-select: none;
     max-width: 70%;
-    
 }
 
 
@@ -111,7 +115,7 @@ html, body{
     margin: 0;
     pointer-events: bounding-box;
     user-select: none;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi-Variable', sans-serif;
     text-decoration: none; /* Add this line to remove the underline */
 }
 
@@ -136,7 +140,7 @@ a:visited {
     pointer-events: none;
     user-select: none;
     margin-right: 5%;
-    margin-left: 1%;
+    margin-left: -10%;
     margin-bottom: 2%;
     white-space: nowrap;
 }
@@ -146,6 +150,7 @@ a:visited {
     pointer-events: none;
     user-select: none;
     margin: 0;
+    color: #D9D9D9;
 }
 
 .landingText h1{
