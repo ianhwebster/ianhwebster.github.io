@@ -42,12 +42,13 @@ html, body{
 .pfp {
     display:flex;
     align-items: flex-end;
+    max-height: 100%;
+    object-fit: scale-down;
 }
 
 .pfp img {
     pointer-events: none;
     user-select: none;
-    max-width: 70%;
 }
 
 
@@ -140,7 +141,7 @@ a:visited {
     pointer-events: none;
     user-select: none;
     margin-right: 5%;
-    margin-left: -10%;
+    margin-left: 10%;
     margin-bottom: 2%;
     white-space: nowrap;
 }
