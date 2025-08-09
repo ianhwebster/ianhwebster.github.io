@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <h1><a href="#home">Ian Webster</a></h1>
+            <h3>Photographer, Editor, Projectionist, Creative Coder</h3>
+            <nav class="vertical-nav">
+                <a href="#gallery">Gallery</a>
+                <a href="#projections">Projections</a>
+                <a href="#3d-modeling">3D Modeling</a>
+                <div class="spacer"></div>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </aside>
+        <section class="content-area" id="home" style="display: flex;">
+            <div class="gallery">
+                <div class="row">
+                    <div class="column">
+                        <img src="imgs/home/h-img1.jpg">
+                        <img src="imgs/home/h-img2.jpg">
+                        <img src="imgs/home/h-img3.jpg">
+                        <img src="imgs/home/h-img5.jpg">
+                        <img src="imgs/home/h-img9.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="imgs/home/h-img4.jpg">
+                        <img src="imgs/home/h-img6.jpg">
+                        <img src="imgs/home/h-img7.jpg">
+                        <img src="imgs/home/h-img8.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-area" id="gallery" style="display:none;">
+            <div class="gallery">
+                <div class="row">
+                    <div class="column">
+                        <img src="imgs/gallery/g-img1.jpg">
+                        <img src="imgs/gallery/g-img2.jpg">
+                        <img src="imgs/gallery/g-img3.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="imgs/gallery/g-img4.jpg">
+                        <img src="imgs/gallery/g-img5.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-area" id="projections" style="display:none;">
+            <div class="gallery">
+                <div class="row">
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-area" id="3d-modeling" style="display:none;">
+            <div class="gallery">
+                <div class="row">
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-area" id="about" style="display: none;">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am a passionate photographer, editor, projectionist, and creative coder.</p>
+        </section>
+        <section class="content-area" id="contact" style="display: none;">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
+        </section>
+    </div>
+</body>
+<script>
+function showSection(hash) {
+    const home = document.getElementById('home');
+    const gallery = document.getElementById('gallery');
+    const projections = document.getElementById('projections');
+    const threeDModeling = document.getElementById('3d-modeling');
+    const about = document.getElementById('about');
+    const contact = document.getElementById('contact');
+
+    home.style.display = 'none';
+    gallery.style.display = 'none';
+    projections.style.display = 'none';
+    threeDModeling.style.display = 'none';
+    about.style.display = 'none';
+    contact.style.display = 'none';
+
+    switch(hash){
+        case '#gallery':
+            gallery.style.display = 'flex';
+            break;
+        case '#projections':
+            projections.style.display = 'flex';
+            break;
+        case '#3d-modeling':
+            threeDModeling.style.display = 'flex';
+            break;
+        case '#about':
+            about.style.display = 'flex';
+            break;
+        case '#contact':
+            contact.style.display = 'flex';
+            break;
+        default:
+            home.style.display = 'flex';
+            break;
+    }
+    // if (hash === '#gallery') {
+    //     home.style.display = 'none';
+    //     gallery.style.display = 'flex';
+    // } else {
+    //     home.style.display = 'flex';
+    //     gallery.style.display = 'none';
+    // }
+}
+
+// Handle nav clicks
+document.querySelectorAll('.vertical-nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if (hash === '#gallery' || hash === '#home') {
+            e.preventDefault();
+            showSection(hash);
+            window.location.hash = hash;
+        }
+    });
+});
+
+// Handle direct navigation and back/forward
+window.addEventListener('hashchange', function() {
+    showSection(window.location.hash);
+});
+
+// On page load, show correct section
+showSection(window.location.hash);
+</script>
+</html>
