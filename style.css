@@ -100,6 +100,16 @@ body {
     background: #ffffff;
 }
 
+#threeDModeling {
+    padding-top: 5rem;
+    flex-direction:column;
+}
+
+#threeDModeling h3 {
+    margin-top: 3rem;
+    white-space: nowrap;
+}
+
 .gallery-placeholder {
     width: 100%;
     min-height: 500px;
@@ -162,6 +172,12 @@ footer {
 }
 
 .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column video {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;

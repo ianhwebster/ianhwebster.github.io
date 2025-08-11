@@ -12,9 +12,9 @@
             <h1><a href="#home">Ian Webster</a></h1>
             <h3>Photographer, Editor, Projectionist, Creative Coder</h3>
             <nav class="vertical-nav">
-                <a href="#gallery">Gallery</a>
+                <a href="#photography">Gallery</a>
                 <a href="#projections">Projections</a>
-                <a href="#3d-modeling">3D Modeling</a>
+                <a href="#threeDModeling">3D Modeling</a>
                 <div class="spacer"></div>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -28,15 +28,15 @@
                 <div class="row">
                     <div class="column">
                         <!--
-                        <img src="imgs/gallery/g-img1.jpg">
-                        <img src="imgs/gallery/g-img2.jpg">
-                        <img src="imgs/gallery/g-img3.jpg">
+                        <img src="content/gallery/g-img1.jpg">
+                        <img src="content/gallery/g-img2.jpg">
+                        <img src="content/gallery/g-img3.jpg">
                         -->
                     </div>
                     <div class="column">
                         <!--
-                        <img src="imgs/gallery/g-img4.jpg">
-                        <img src="imgs/gallery/g-img5.jpg">
+                        <img src="content/gallery/g-img4.jpg">
+                        <img src="content/gallery/g-img5.jpg">
                         -->
                     </div>
                 </div>
@@ -52,12 +52,44 @@
                 </div>
             </div>
         </section>
-        <section class="content-area" id="3d-modeling" style="display:none;">
-            <div class="gallery">
+        <section class="content-area" id="threeDModeling" style="display:none;">
+            <h3>Toyota Service Bay - Walkable Showcase</h3>
+            <div class="gallery" id="toyota">
                 <div class="row">
                     <div class="column">
+                        <video controls>
+                            <source src="content/threedmodeling/ToyotaShowcase/Toyota Showcase.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video controls>
+                            <source src="content/threedmodeling/ToyotaShowcase/VR_Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <div class="column">
+                        <img src="content/threedmodeling/ToyotaShowcase/Interior Showroom.png" alt="3D Model 2">
+                        <img src="content/threedmodeling/ToyotaShowcase/Exterior Showroom.png" alt="3D Model 1">
+                        
+                    </div>
+                </div>
+            <h3>Headlights - Mocap Research</h3>
+            <div class="gallery" id="headlight">
+                <div class="row">
+                    <div class="column">
+                        <video controls>
+                            <source src="content/threedmodeling/Headlights/Headlights_Mocap_Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video controls>
+                            <source src="content/threedmodeling/Headlights/Mocap_BTS.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="content/threedmodeling/Headlights/img2.png" alt="3D Model 1">
+                    </div>
+                    <div class="column">
+                        <img src="content/threedmodeling/Headlights/img3.png" alt="3D Model 1">
+                        <img src="content/threedmodeling/Headlights/img1.png" alt="3D Model 2">
+                        <img src="content/threedmodeling/Headlights/img1_BTS.png" alt="3D Model 1">
                     </div>
                 </div>
             </div>
@@ -65,7 +97,7 @@
         <section class="content-area" id="about" style="display: none;">
             <h2>About Me</h2>
             <div class="about-info">
-                <img src="imgs/about/about_placeholder.jpg" alt="Ian Webster">
+                <img src="content/about/about_placeholder.jpg" alt="Ian Webster">
                 <p>
                     Ian Webster is a visual artist, photographer, projection mapper, and creative coder based in Austin, Texas. A Meadows School of the Arts (SMU) graduate, he explores storytelling through real-time visuals, driven by the energy of live performance. With a passion for blending technology with interactive and reactive art, he has collaborated with local musicians to create immersive, one-of-a-kind experiences.</br></br>Behind the lens, Ian specializes in live music, event, and street photography, crafting images that amplify the energy of performers and crowds, where the interplay of light and motion becomes its own kind of performance. His street photography thrives on urban spontaneity, framing light and subject into visual narratives of the unseen and unscripted.
                 </p>
@@ -83,7 +115,7 @@ function showSection(hash) {
     const home = document.getElementById('home');
     const gallery = document.getElementById('gallery');
     const projections = document.getElementById('projections');
-    const threeDModeling = document.getElementById('3d-modeling');
+    const threeDModeling = document.getElementById('threeDModeling');
     const about = document.getElementById('about');
     const contact = document.getElementById('contact');
 
@@ -101,7 +133,7 @@ function showSection(hash) {
         case '#projections':
             projections.style.display = 'flex';
             break;
-        case '#3d-modeling':
+        case '#threeDModeling':
             threeDModeling.style.display = 'flex';
             break;
         case '#about':
@@ -114,13 +146,6 @@ function showSection(hash) {
             home.style.display = 'flex';
             break;
     }
-    // if (hash === '#gallery') {
-    //     home.style.display = 'none';
-    //     gallery.style.display = 'flex';
-    // } else {
-    //     home.style.display = 'flex';
-    //     gallery.style.display = 'none';
-    // }
 }
 
 // Handle nav clicks
@@ -145,7 +170,7 @@ showSection(window.location.hash);
 </script>
 <script>
 // Dynamically load home gallery images from JSON
-fetch('imgs/home/list.json')
+fetch('content/home/list.json')
     .then(response => response.json())
     .then(images => {
         const gallery = document.getElementById('home-gallery');
@@ -159,7 +184,7 @@ fetch('imgs/home/list.json')
         col2.className = 'column';
         images.forEach((img, i) => {
             const el = document.createElement('img');
-            el.src = 'imgs/home/' + img;
+            el.src = 'content/home/' + img;
             el.alt = '';
             if (i % 2 === 0) {
                 col1.appendChild(el);
