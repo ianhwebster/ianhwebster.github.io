@@ -145,7 +145,7 @@ showSection(window.location.hash);
 </script>
 <script>
 // Dynamically load home gallery images from JSON
-fetch('imgs/home/images.json')
+fetch('imgs/home/list.json')
     .then(response => response.json())
     .then(images => {
         const gallery = document.getElementById('home-gallery');
