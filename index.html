@@ -21,27 +21,7 @@
             </nav>
         </aside>
         <section class="content-area" id="home" style="display: flex;">
-            <div class="gallery">
-                <div class="row">
-                    <div class="column">
-                        <!--
-                        <img src="imgs/home/h-img1.jpg">
-                        <img src="imgs/home/h-img2.jpg">
-                        <img src="imgs/home/h-img3.jpg">
-                        <img src="imgs/home/h-img5.jpg">
-                        <img src="imgs/home/h-img9.jpg">
-                        -->
-                    </div>
-                    <div class="column">
-                        <!--
-                        <img src="imgs/home/h-img4.jpg">
-                        <img src="imgs/home/h-img6.jpg">
-                        <img src="imgs/home/h-img7.jpg">
-                        <img src="imgs/home/h-img8.jpg">
-                        -->
-                    </div>
-                </div>
-            </div>
+            <div class="gallery" id="home-gallery"></div>
         </section>
         <section class="content-area" id="gallery" style="display:none;">
             <div class="gallery">
@@ -162,5 +142,34 @@ window.addEventListener('hashchange', function() {
 
 // On page load, show correct section
 showSection(window.location.hash);
+</script>
+<script>
+// Dynamically load home gallery images from JSON
+fetch('imgs/home/images.json')
+    .then(response => response.json())
+    .then(images => {
+        const gallery = document.getElementById('home-gallery');
+        if (!gallery) return;
+        const row = document.createElement('div');
+        row.className = 'row';
+        // Split images into two columns for layout
+        const col1 = document.createElement('div');
+        col1.className = 'column';
+        const col2 = document.createElement('div');
+        col2.className = 'column';
+        images.forEach((img, i) => {
+            const el = document.createElement('img');
+            el.src = 'imgs/home/' + img;
+            el.alt = '';
+            if (i % 2 === 0) {
+                col1.appendChild(el);
+            } else {
+                col2.appendChild(el);
+            }
+        });
+        row.appendChild(col1);
+        row.appendChild(col2);
+        gallery.appendChild(row);
+    });
 </script>
 </html>
