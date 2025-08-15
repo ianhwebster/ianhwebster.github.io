@@ -8,9 +8,6 @@
         var img = document.createElement('img');
         img.src = src;
         img.id = id;
-        img.onload = function() {
-            console.log('[photography-loader] Loaded:', src, 'ID:', id);
-        };
         img.onerror = function() {
             console.warn('[photography-loader] Failed to load:', src, 'ID:', id);
         };
