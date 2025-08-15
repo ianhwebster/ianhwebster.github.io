@@ -1,3 +1,23 @@
+/* Photography filter nav styles */
+.photo-filter-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.photo-filter-nav button {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.photo-filter-nav button:hover, .photo-filter-nav button.active {
+    background: #444;
+}
 /* Remove underline and recolor all h1 links */
 h1 a {
     text-decoration: none;

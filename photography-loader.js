@@ -43,22 +43,41 @@
         col1.className = 'column';
         var col2 = document.createElement('div');
         col2.className = 'column';
-        // Flatten all images with their category and index
+        // Flatten all images with their category
         var allImages = [];
         Object.entries(categories).forEach(function([cat, arr]) {
-            arr.forEach(function(url, idx) {
-                allImages.push({ url, id: cat + '-' + idx });
+            arr.forEach(function(url) {
+                allImages.push({ url, id: cat });
             });
         });
         // Distribute images: even index to col1, odd to col2
         allImages.forEach(function(img, i) {
             var imgElem = createImg(img.url, img.id);
+            imgElem.setAttribute('data-category', img.id);
             if (i % 2 === 0) col1.appendChild(imgElem);
             else col2.appendChild(imgElem);
         });
         gallery.appendChild(col1);
         gallery.appendChild(col2);
         console.log('[photography-loader] Populated', allImages.length, 'images.');
+    }
+
+    // Filtering logic
+    function setupFilterNav() {
+        var nav = document.querySelector('#photography .photo-filter-nav');
+        if (!nav) return;
+        nav.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'BUTTON') return;
+            var filter = e.target.getAttribute('data-filter');
+            var imgs = document.querySelectorAll('#photography .gallery img');
+            imgs.forEach(function(img) {
+                if (filter === 'all' || img.getAttribute('data-category') === filter) {
+                    img.style.display = '';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        });
     }
 
     // Only run on #photography section
@@ -69,6 +88,7 @@
     // Run on page load if #photography is visible
     document.addEventListener('DOMContentLoaded', function() {
         var section = document.getElementById('photography');
+        setupFilterNav();
         if (section && section.style.display !== 'none') {
             onPhotographyVisible();
         }
