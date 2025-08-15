@@ -1,8 +1,47 @@
+/* Image modal popup styles */
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+.img-modal-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    box-shadow: 0 0 32px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    background: #fff;
+    object-fit: contain;
+}
+.img-modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    z-index: 10001;
+}
+.img-modal-close:after {
+    content: '\00d7';
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 2.5rem;
+    text-align: center;
+    display: block;
+}
 /* Force #photography content area to flex-direction: column */
-#photography.content-area {
+/* #photography .content-area {
     display: flex !important;
     flex-direction: column !important;
-}
+} */
 /* Photography filter nav styles */
 .photo-filter-nav {
     display: flex;

@@ -230,6 +230,37 @@ window.addEventListener('hashchange', function() {
 // On page load, show correct section
 showSection(window.location.hash);
 </script>
+<div id="img-modal" class="img-modal">
+    <span class="img-modal-close" id="img-modal-close"></span>
+    <img class="img-modal-content" id="img-modal-img">
+</div>
+<script>
+// Image modal popup for all images
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('img-modal');
+    const modalImg = document.getElementById('img-modal-img');
+    const closeBtn = document.getElementById('img-modal-close');
+    function showModal(src) {
+        modal.style.display = 'flex';
+        modalImg.src = src;
+    }
+    function hideModal() {
+        modal.style.display = 'none';
+        modalImg.src = '';
+    }
+    document.body.addEventListener('click', function(e) {
+        if (e.target.tagName === 'IMG' && !e.target.closest('.img-modal')) {
+            showModal(e.target.src);
+        }
+        if (e.target === modal || e.target === closeBtn) {
+            hideModal();
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') hideModal();
+    });
+});
+</script>
 </script>
 <script src="photography-loader.js"></script>
 <script>
