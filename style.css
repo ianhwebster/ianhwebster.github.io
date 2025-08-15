@@ -120,6 +120,10 @@ body {
     background: #ffffff;
 }
 
+.content-area #photography {
+    flex-direction: column;
+}
+
 #threeDModeling, #projections {
     padding-top: 5rem;
     flex-direction:column;
