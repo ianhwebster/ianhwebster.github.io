@@ -68,10 +68,14 @@
         if (!nav) return;
         nav.addEventListener('click', function(e) {
             if (e.target.tagName !== 'BUTTON') return;
+            // Set active class
+            nav.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
             var filter = e.target.getAttribute('data-filter');
             var imgs = document.querySelectorAll('#photography .gallery img');
             imgs.forEach(function(img) {
-                if (filter === 'all' || img.getAttribute('data-category') === filter) {
+                // Compare ID case-insensitively
+                if (filter === 'all' || img.id.toLowerCase() === filter.toLowerCase()) {
                     img.style.display = '';
                 } else {
                     img.style.display = 'none';
