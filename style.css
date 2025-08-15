@@ -1,3 +1,8 @@
+/* Force #photography content area to flex-direction: column */
+#photography.content-area {
+    display: flex !important;
+    flex-direction: column !important;
+}
 /* Photography filter nav styles */
 .photo-filter-nav {
     display: flex;
