@@ -154,16 +154,32 @@
         <section class="content-area" id="about" style="display: none;">
             <h2>About Me</h2>
             <div class="about-info">
-                <img src="content/about/about_placeholder.jpg" alt="Ian Webster">
+                <div class="about-pfp" style="flex-direction: column;">
+                    <img src="content/about/about_placeholder.jpg" alt="Ian Webster">
+                    <a href="content/about/Ian_Webster_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+                </div>
                 <p>
-                    Ian Webster is a visual artist, photographer, projection mapper, and creative coder based in Austin, Texas. A Meadows School of the Arts (SMU) graduate, he explores storytelling through real-time visuals, driven by the energy of live performance. With a passion for blending technology with interactive and reactive art, he has collaborated with local musicians to create immersive, one-of-a-kind experiences.</br></br>Behind the lens, Ian specializes in live music, event, and street photography, crafting images that amplify the energy of performers and crowds, where the interplay of light and motion becomes its own kind of performance. His street photography thrives on urban spontaneity, framing light and subject into visual narratives of the unseen and unscripted.
+                    Ian Webster is a creative coder, photographer, projection mapper, and visual artist based in Austin, Texas. A Meadows School of the Arts (SMU) graduate, he explores storytelling through real-time visuals, driven by the energy of live performance. With a passion for blending technology with interactive and reactive art, he has collaborated with local musicians to create immersive, one-of-a-kind experiences.</br></br>Behind the lens, Ian specializes in live music, event, and street photography, crafting images that amplify the energy of performers and crowds, where the interplay of light and motion becomes its own kind of performance. His street photography thrives on urban spontaneity, framing light and subject into visual narratives of the unseen and unscripted.
+                    </p>
+                    <p>
                 </p>
             </div>
         </section>
         <section class="content-area" id="contact" style="display: none;">
             <h2>Contact Me</h2>
             <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
-        </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/iangw_art/" target="_blank" rel="noopener noreferrer">
+                    <img src="content/about/icons/Instagram_icon.png" id='icon' alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/ian-webster/" target="_blank" rel="noopener noreferrer">
+                    <img src="content/about/icons/LinkedIN_icon.png" id='icon' alt="linkedin">
+                </a>
+                <a href="mailto:ianwebstertx@gmail.com">
+                    <img src="content/about/icons/Mail_icon.png" id='icon' alt="Email">
+                </a>
+
+            </div>
     </section>
 </div>
 </body>
@@ -248,14 +264,18 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
         modalImg.src = '';
     }
-    document.body.addEventListener('click', function(e) {
-        if (e.target.tagName === 'IMG' && !e.target.closest('.img-modal')) {
-            showModal(e.target.src);
-        }
-        if (e.target === modal || e.target === closeBtn) {
-            hideModal();
-        }
-    });
+        document.body.addEventListener('click', function(e) {
+            if (
+                e.target.tagName === 'IMG' &&
+                !e.target.closest('.img-modal') &&
+                e.target.id !== 'icon'
+            ) {
+                showModal(e.target.src);
+            }
+            if (e.target === modal || e.target === closeBtn) {
+                hideModal();
+            }
+        });
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') hideModal();
     });

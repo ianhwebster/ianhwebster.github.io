@@ -163,6 +163,27 @@ body {
     text-decoration-thickness: 2px;
 }
 
+.about-pfp a{
+        color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+    border-left: 4px solid transparent;
+    transition: color 0.2s, border-color 0.2s, text-decoration 0.2s;
+}
+
+.about-pfp a:hover {
+    color: #111;
+    border-left: 4px solid transparent;
+    text-decoration: underline;
+    text-decoration-color: #111;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+}
+
+
+
 
 .content-area {
     flex: 1;
@@ -272,11 +293,23 @@ footer {
 }
 
 .about-info img {
-    max-width: 150px;
+    max-width: 200px;
     border-radius: 0%;
     margin-bottom: 1rem;
     object-fit: contain;
     margin-right: 1rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.social-links img {
+    width: 48px;
+    height: 48px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
