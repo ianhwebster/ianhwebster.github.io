@@ -100,15 +100,16 @@ body {
     background: #ffffff;
 }
 
-#threeDModeling {
+#threeDModeling, #projections {
     padding-top: 5rem;
     flex-direction:column;
 }
 
-#threeDModeling h3 {
+#threeDModeling h3, #projections h3 {
     margin-top: 3rem;
     white-space: nowrap;
 }
+
 
 .gallery-placeholder {
     width: 100%;
@@ -171,7 +172,7 @@ footer {
   padding: 0 4px;
 }
 
-.column img {
+.column img, .column video, .column iframe {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;

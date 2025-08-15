@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="https://unpkg.com/@imagekit/javascript@5.0.0/dist/imagekit.min.js"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,7 @@
             <h1><a href="#home">Ian Webster</a></h1>
             <h3>Photographer, Editor, Projectionist, Creative Coder</h3>
             <nav class="vertical-nav">
-                <a href="#photography">Gallery</a>
+                <a href="#photography">Photography</a>
                 <a href="#projections">Projections</a>
                 <a href="#threeDModeling">3D Modeling</a>
                 <div class="spacer"></div>
@@ -21,12 +22,52 @@
             </nav>
         </aside>
         <section class="content-area" id="home" style="display: flex;">
-            <div class="gallery" id="home-gallery"></div>
+            <div class="gallery" id="home-gallery">
+                <div class="row">
+                    <div class="column">
+                        <!--
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/g-img5.jpg?updatedAt=1755285186232
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img6.JPG?updatedAt=1755276992196
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img4.jpg?updatedAt=1755276992520
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img7.JPG?updatedAt=1755276989340
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img2.jpg?updatedAt=1755276989314
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img9.JPG?updatedAt=1755276986122
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/h-img8.jpg?updatedAt=1755276980564
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/img3.png?updatedAt=1755276970846
+                        https://ik.imagekit.io/fxqt7p6y6/homepage/p_img1.jpg?updatedAt=1755276969627
+                        -->
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/g-img5.jpg?updatedAt=1755285186232" alt="Gallery Image 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img6.JPG?updatedAt=1755276992196" alt="Gallery Image 2">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img3.jpg?updatedAt=1755285568988" alt="Gallery Image 3">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img7.JPG?updatedAt=1755276989340" alt="Gallery Image 4">
+                    </div>
+                    <div class="column">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img9.JPG?updatedAt=1755276986122" alt="Gallery Image 6">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/img3.png?updatedAt=1755276970846" alt="Gallery Image 8">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img8.jpg?updatedAt=1755276980564" alt="Gallery Image 7">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/p_img1.jpg?updatedAt=1755276969627" alt="Gallery Image 9">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/homepage/h-img2.jpg?updatedAt=1755276989314" alt="Gallery Image 5">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="content-area" id="photography" style="display:none;">
+            <div class="gallery">
+                <div class="row">
+                    <div class="column">
+                        
+                    </div>
+                    <div class="column">
+                        
+                    </div>
+                </div>
         </section>
         <section class="content-area" id="gallery" style="display:none;">
             <div class="gallery">
                 <div class="row">
                     <div class="column">
+                        
                         <!--
                         <img src="content/gallery/g-img1.jpg">
                         <img src="content/gallery/g-img2.jpg">
@@ -43,11 +84,31 @@
             </div>
         </section>
         <section class="content-area" id="projections" style="display:none;">
+            <h3>Rats of Mars - Projection Lighting</h3>
+            <div class="gallery">
+                <div class="row">
+                    <div class="column"><p><br></p>
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img1.jpg?updatedAt=1755277144400" alt="Rats of Mars - Projection Lighting 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img2.JPG?updatedAt=1755277155132" alt="Rats of Mars - Projection Lighting 2">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img3.JPG?updatedAt=1755277155132" alt="Rats of Mars - Projection Lighting 3">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img4.jpg?updatedAt=1755277144452" alt="Rats of Mars - Projection Lighting 4">
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/projections/p_mov.mp4/ik-video.mp4?updatedAt=1755277178379&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fprojections%2Fp_mov.mp4%2Fik-video.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755277178379&updatedAt=1755277178379" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
+                    </div>
+                    <div class="column">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img7.JPG?updatedAt=1755277145925" alt="Rats of Mars - Projection Lighting 7">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img6.JPG?updatedAt=1755277142671" alt="Rats of Mars - Projection Lighting 5">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/projections/p_img5.JPG?updatedAt=1755277142654" alt="Rats of Mars - Projection Lighting 6">
+                    </div>
+                </div>
+            </div>
+            <h3>Poster Projection Mapping</h3>
             <div class="gallery">
                 <div class="row">
                     <div class="column">
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/projections/posters/poster_mov.mp4/ik-video.mp4?updatedAt=1755277165637&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fprojections%2Fposters%2Fposter_mov.mp4%2Fik-video.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755277165637&updatedAt=1755277165637" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
                     </div>
                     <div class="column">
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/projections/posters/poster_mov_bts.mp4/ik-video.mp4?updatedAt=1755277171097&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fprojections%2Fposters%2Fposter_mov_bts.mp4%2Fik-video.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755277171097&updatedAt=1755277171097" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
                     </div>
                 </div>
             </div>
@@ -57,18 +118,12 @@
             <div class="gallery" id="toyota">
                 <div class="row">
                     <div class="column">
-                        <video controls>
-                            <source src="content/threedmodeling/ToyotaShowcase/Toyota Showcase.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video controls>
-                            <source src="content/threedmodeling/ToyotaShowcase/VR_Demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/threedmodeling/ToyotaShowcase/Toyota%20Showcase.mp4?updatedAt=1755278087394&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fthreedmodeling%2FToyotaShowcase%2FToyota%2520Showcase.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755278087394&updatedAt=1755278087394" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/threedmodeling/ToyotaShowcase/VR_Demo.mp4?updatedAt=1755278095298&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fthreedmodeling%2FToyotaShowcase%2FVR_Demo.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755278095298&updatedAt=1755278095298" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
                     </div>
                     <div class="column">
-                        <img src="content/threedmodeling/ToyotaShowcase/Interior Showroom.png" alt="3D Model 2">
-                        <img src="content/threedmodeling/ToyotaShowcase/Exterior Showroom.png" alt="3D Model 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/ToyotaShowcase/Interior%20Showroom.png?updatedAt=1755278062225" alt="3D Model 2">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/ToyotaShowcase/Exterior%20Showroom.png?updatedAt=1755278058705" alt="3D Model 1">
                         
                     </div>
                 </div>
@@ -76,20 +131,14 @@
             <div class="gallery" id="headlight">
                 <div class="row">
                     <div class="column">
-                        <video controls>
-                            <source src="content/threedmodeling/Headlights/Headlights_Mocap_Demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video controls>
-                            <source src="content/threedmodeling/Headlights/Mocap_BTS.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <img src="content/threedmodeling/Headlights/img2.png" alt="3D Model 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/Headlights/img2.png?updatedAt=1755278053195" alt="3D Model 1">
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/threedmodeling/Headlights/Headlights_Mocap_Demo.mp4?updatedAt=1755278104553&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fthreedmodeling%2FHeadlights%2FHeadlights_Mocap_Demo.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755278104553&updatedAt=1755278104553" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
+                        <iframe width="560" height="315" src="https://imagekit.io/player/embed/fxqt7p6y6/threedmodeling/Headlights/Mocap_BTS.mp4?updatedAt=1755278074444&thumbnail=https%3A%2F%2Fik.imagekit.io%2Ffxqt7p6y6%2Fthreedmodeling%2FHeadlights%2FMocap_BTS.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1755278074444&updatedAt=1755278074444" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
                     </div>
                     <div class="column">
-                        <img src="content/threedmodeling/Headlights/img3.png" alt="3D Model 1">
-                        <img src="content/threedmodeling/Headlights/img1.png" alt="3D Model 2">
-                        <img src="content/threedmodeling/Headlights/img1_BTS.png" alt="3D Model 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/Headlights/img3.png?updatedAt=1755278054577" alt="3D Model 1">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/Headlights/img1.png?updatedAt=1755278050384" alt="3D Model 2">
+                        <img src="https://ik.imagekit.io/fxqt7p6y6/threedmodeling/Headlights/img1_BTS.png?updatedAt=1755278057015" alt="3D Model 1">
                     </div>
                 </div>
             </div>
@@ -113,7 +162,7 @@
 <script>
 function showSection(hash) {
     const home = document.getElementById('home');
-    const gallery = document.getElementById('gallery');
+    const photography = document.getElementById('photography');
     const projections = document.getElementById('projections');
     const threeDModeling = document.getElementById('threeDModeling');
     const about = document.getElementById('about');
@@ -125,10 +174,14 @@ function showSection(hash) {
     threeDModeling.style.display = 'none';
     about.style.display = 'none';
     contact.style.display = 'none';
+    photography.style.display = 'none';
 
     switch(hash){
         case '#gallery':
             gallery.style.display = 'flex';
+            break;
+        case '#photography':
+            photography.style.display = 'flex';
             break;
         case '#projections':
             projections.style.display = 'flex';
@@ -168,6 +221,8 @@ window.addEventListener('hashchange', function() {
 // On page load, show correct section
 showSection(window.location.hash);
 </script>
+</script>
+<script src="photography-loader.js"></script>
 <script>
 // Dynamically load home gallery images from JSON
 fetch('content/home/list.json')
